@@ -1,0 +1,32 @@
+{{!< default}}
+{{> header}}
+<main class="main_teq" role="main">
+	{{#foreach posts}}
+		<article class="article_teq" role="article" itemscope itemtype="http://schema.org/Article">
+			<header class="postheader_teq">
+				<time class="date_teq" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+				<h1 class="posttitle_teq" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+			</header><!-- /header -->
+		    {{! Full post content }}
+			<div class="postcontent_teq" itemprop="articleBody">		    
+				{{content}}
+				{{! parameter to restrict the number of words output }}
+				{{words="100"}}
+			</div>
+		    {{! Read More post content }}
+			{{! excerpt}}
+			<div class="posttags_teq">
+				{{#if tags}}
+					Tags: {{tags separator=" | "}}
+				{{/if}}
+			</div>
+		</article>
+	{{/foreach}}
+
+	{{#if pagination}}
+		<div class="pagination_teq">	
+			{{{pagination}}}
+		</div>
+	{{/if}}
+</main>
+{{> footer}}

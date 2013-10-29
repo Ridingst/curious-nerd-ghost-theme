@@ -1,0 +1,10 @@
+/* Palette 
+	#FFFFFF bianco
+	#DADFE1	grigio chiaro
+	#FF6666 rosso
+	#0B2C3C blu notte
+	#444444 grigio scuro
+ */ 
+body {
+	background-color: #444444;
+}
