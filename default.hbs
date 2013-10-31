@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
 	    {{! Document Settings }}
 	    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
 		{{! Page Meta }}
 		<title>{{meta_title}}</title>
 		<meta name="description" content="{{meta_description}}" />
+
+		{{! Styles }}
+		<!--<link rel="stylesheet" href="/assets/css/font-awesome.min.css">-->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+		<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	    {{! Responsive Meta Tags }}
+	    <meta name="HandheldFriendly" content="True" />
+	    <meta name="MobileOptimized" content="320" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	    {{! Ghost outputs important style and meta data with this tag }}
+	    {{ghost_head}}
+
+	</head>
+	<body class="{{body_class}}">
+		<div class="wrapper_cn">
+
+	        <div id="ajax-container">
+				{{{body}}}
+			</div>
+
+		</div>
+
+	    {{! Ghost outputs important scripts and data with this tag }}
+		{{ghost_foot}}
+
 		{{! Scripts }}
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="/assets/js/jquery.parallax-1.1.3.js"></script>
 		<script type="text/javascript" src="/assets/js/jquery.localscroll-1.2.7-min.js"></script>
 		<script type="text/javascript" src="/assets/js/jquery.scrollTo-1.4.2-min.js"></script>
-		{{! Styles }}
-		<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" /> 
-	    {{! Responsive Meta Tags }}
-	    <meta name="HandheldFriendly" content="True" />
-	    <meta name="MobileOptimized" content="320" />
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	    {{ghost_head}}
-	</head>
-	<body class="{{body_class}}">
-		<div class="wrapper_teq">
-			{{{body}}}
-		</div>
-		{{ghost_foot}}
-	<script type="text/javascript">
-		$(document).ready(function(){
-		    $('#nav').localScroll();
-		})
-	</script>
+		<script type="text/javascript" src="/assets/js/skel.min.js"></script>
+		<script type="text/javascript" src="/assets/js/skel-panels.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+			    $('#nav').localScroll();
+			})
+		</script>
 	</body>
 </html>

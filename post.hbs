@@ -1,38 +1,38 @@
 {{!< default}}
 {{> header}}
-<main class="main_teq" role="main">
+<main class="main_cn" role="main">
 	{{#post}}
-	<article class="article_teq" role="article" itemscope itemtype="http://schema.org/Article">
-		<header class="postheader_teq">
-			<time class="date_teq" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
-			<h1 class="posttitle_teq" itemprop="headline">{{title}}</h1>
+	<article class="article_cn" role="article" itemscope itemtype="http://schema.org/Article">
+		<header class="postheader_cn">
+			<time class="date_cn" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+			<h1 class="posttitle_cn" itemprop="headline">{{title}}</h1>
 		</header>
-		<div class="postcontent_teq" itemprop="articleBody">
+		<div class="postcontent_cn" itemprop="articleBody">
 			{{content}}
 		</div>
 		{{#if tags}}
-			<div class="posttags_teq">
+			<div class="posttags_cn">
 				Tags: {{tags separator=" | "}}
 			</div>
 		{{/if}}
-	    <div class="sharepost_teq">
-		    <h4 class="share_teq">Share this post: &nbsp;</h4>
-		    <a class="share_teq icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_teq">Twitter</span></a>
-		    <a class="share_teq icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_teq">Facebook</span></a>
-		    <a class="share_teq icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_teq">Google+</span></a>
+	    <div class="sharepost_cn">
+		    <h4 class="share_cn">Share this post: &nbsp;</h4>
+		    <a class="share_cn icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_cn">Twitter</span></a>
+		    <a class="share_cn icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_cn">Facebook</span></a>
+		    <a class="share_cn icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_cn">Google+</span></a>
 	    </div>
         {{#if author}}
-        <footer class="postfooter_teq">
+        <footer class="postfooter_cn">
 	    	<address itemscope itemtype="http://schema.org/Person">
 	       		{{#if author.image}}
-		        	<div class="authorimage_teq"><img src="{{author.image}}" itemprop="image" /></div>
+		        	<div class="authorimage_cn"><img src="{{author.image}}" itemprop="image" /></div>
 		        {{/if}}
-		        	<h4 class="authorname_teq"><span itemprop="author">{{author.name}}</span></h4>
+		        	<h4 class="authorname_cn"><span itemprop="author">{{author.name}}</span></h4>
 		        {{#if author.website}}
-		        	<div class="authorwebsite_teq"><a href="{{author.website}}" itemprop="url">{{author.website}}</a></div>
+		        	<div class="authorwebsite_cn"><a href="{{author.website}}" itemprop="url">{{author.website}}</a></div>
 		        {{/if}}
 	    	</address>
-	        <div class="authorbio_teq">
+	        <div class="authorbio_cn">
 	        	<p>{{author.bio}}</p>
 	        </div>
         </footer>
@@ -40,7 +40,7 @@
 	</article>
 	{{/post}}
 	{{#if pagination}}
-		<div class="pagination_teq">
+		<div class="pagination_cn">
 			{{{pagination}}}
 		</div>
 	{{/if}}

@@ -1,19 +1,19 @@
 {{!< default}}
 {{> header}}
-<main class="main_teq" role="main">
+<main class="main_cn" role="main">
 	{{#foreach posts}}
-		<article class="article_teq" role="article" itemscope itemtype="http://schema.org/Article">
-			<header class="postheader_teq">
-				<time class="date_teq" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-				<h1 class="posttitle_teq" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+		<article class="article_cn" role="article" itemscope itemtype="http://schema.org/Article">
+			<header class="postheader_cn">
+				<time class="date_cn" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+				<h1 class="posttitle_cn" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
 			</header><!-- /header -->
 		    {{! Full post content }}
-			<div class="postcontent_teq" itemprop="articleBody">		    
+			<div class="postcontent_cn" itemprop="articleBody">		    
 				{{content}}
 			</div>
 		    {{! Read More post content }}
 			{{! excerpt}}
-			<div class="posttags_teq">
+			<div class="posttags_cn">
 				{{#if tags}}
 					Tags: {{tags separator=" | "}}
 				{{/if}}
@@ -22,7 +22,7 @@
 	{{/foreach}}
 
 	{{#if pagination}}
-		<div class="pagination_teq">	
+		<div class="pagination_cn">	
 			{{{pagination}}}
 		</div>
 	{{/if}}
